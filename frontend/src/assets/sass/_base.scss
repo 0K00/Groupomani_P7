@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: $snow;
+}
+
+.container {
+	display: flex;
+	padding: 24px;
+}
+
+@media (max-width: 590px) {
+	.container {
+		display: flex;
+		padding: 8px;
+	}
+
+	.l-posts {
+		margin-top: 24px;
+	}
+}
+
+.l-menu {
+	position: fixed;
+	margin-left: 128px;
+}
+
+.fas {
+	background-color: transparent;
+}
+
+.modify-container {
+	display: flex;
+	align-items: center;
+
+	img {
+		border-radius: 8px;
+	}
+
+	:not(:last-child) {
+		margin-right: 16px;
+	}
+}
+
+.mt-24 {
+	margin-top: 24px;
+}
+
+.mr-24 {
+	margin-right: 24px;
+}
+
