@@ -1,12 +1,13 @@
 const db = require('../models');
 const bcrypt = require('bcrypt');
+require('dotenv').config();
 
 function setAdmin(req, res) {
 	db.User.findOne({ where: { email: 'admin@mail.com' } || { pseudo: 'admin' } })
 		.then(user => {
 			if (!user) {
 				bcrypt
-					.hash('Moderator', 10)
+					.hash(process.env.PW_ADMIN, 10)
 					.then(hash => {
 						const admin = db.User.create({
 							pseudo: 'admin',
@@ -17,7 +18,7 @@ function setAdmin(req, res) {
 							.then(admin => {
 								console.log({
 									admin,
-									message: `Your admin account has been created ${admin.pseudo}!`
+									message: `Your admin account has been created ${admin.pseudo}.`
 								});
 							})
 							.catch(error => {
