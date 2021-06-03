@@ -1,0 +1,44 @@
+.int-container {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.int {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background: none;
+	display: flex;
+	align-items: center;
+	@include text(700, 16px, 24px);
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+	&-value {
+		color: $gray-100;
+    margin-left: 8px;
+	}
+
+  .int_active {
+    color: $red;
+  }
+
+  div {
+    color: $gray-50;
+  }
+
+	.fas {
+		font-size: 20px;
+		margin-right: 4px;
+		transition: 0.3s ease-in-out;
+	}
+}
+
+.int:hover .fas {
+	color: $blue-10;
+}
+.int:active .fas {
+	transform: scale(1.5);
+}

@@ -1,0 +1,68 @@
+.tabbar-desktop {
+	.tab {
+		margin-bottom: 16px;
+	}
+  button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1285px) {
+	.l-menu {
+		width: calc(100vw - 24px);
+		h1, .user, .trademark {
+			display: none;
+		}
+}
+
+@media (max-width: 590px) {
+	.l-menu {
+		width: 100vw;
+	}
+}
+
+	.l-menu {
+		background-color: $snow;
+		position: fixed;
+		bottom: 20px;
+		z-index: 1;
+		padding: 18px 0;
+		margin: 0 auto;
+		.tabbar-desktop {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+		.tab-text {
+			display: none;
+		}
+	}
+}
+
+.tab {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: $gray-100;
+	transition: 0.3s ease-in-out;
+	width: fit-content;
+
+	.fas {
+		font-size: 24px;
+		margin-right: 16px;
+	}
+
+	&-text {
+		@include text(500, 16px, 24px);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $blue-50;
+	}
+}

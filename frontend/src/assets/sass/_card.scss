@@ -1,0 +1,33 @@
+.user {
+	margin-bottom: 16px;
+}
+
+.card-img {
+	background: $gray-10;
+	width: 504px;
+	height: 504px;
+	border-radius: 24px;
+	margin-bottom: 16px;
+	overflow: hidden;
+	position: relative;
+	object-fit: cover;
+}
+.card-content {
+	@include text(600, 14px, 20px);
+	color: $gray-50;
+	margin-bottom: 16px;
+}
+
+@media (max-width: 590px) {
+	.card-img {
+		max-width: 366px;
+		max-height: 366px;
+	}
+}
+
+@media (max-width: 390px) {
+	.card-img {
+		max-width: 300px;
+		max-height: 300px;
+	}
+}
